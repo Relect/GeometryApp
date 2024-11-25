@@ -14,5 +14,16 @@ public class Main {
         System.out.println("Triangle a=2, b=2, c=2");
         System.out.println("Triangle area:" + triangle.getArea());
         System.out.println("Triangle perimeter:" + triangle.getPerimeter());
+
+        Shape circle1 = new Circle(2.0);
+        Shape circle2 = new Circle(2.0);
+        Shape circle3 = new Circle(2.1);
+        Shape triangle1 = new Triangle(1.0, 2, 3);
+        Shape triangle2 = new Triangle(3,2,1);
+        System.out.println(Shapes.compareShape(circle1, circle2));
+        System.out.println(Shapes.compareShape(circle1, circle3));
+        System.out.println(Shapes.compareShape(triangle1, triangle2));
+        System.out.println(Shapes.compareShape(circle1, triangle1));
+        System.out.println(Shapes.toCubicCentimeter(circle1.getArea()));
     }
 }
